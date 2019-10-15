@@ -29,7 +29,7 @@ function replaceData(data, errorPositions) {
 
 function encodeHamming(data) {
     const positions = [ [ 1, 2, 3 ], [ 0, 2, 3 ], [ 0, 1, 3 ] ];
-    let evenCode = ""; 
+    let evenCode = ''; 
 
     positions.forEach( (round) => {
         let isEven = true;
