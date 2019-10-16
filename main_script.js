@@ -32,7 +32,12 @@ function getDecode() {
     {
         decodedText = decodeHamming(encodedMessage);
         if (decodedText.length > 7)
-            writeToErrorBlock("Error. More than one errors were found.");  
+        {
+            if (decodedText[7] === "1")
+                writeToErrorBlock("An error was found.")
+            else 
+                writeToErrorBlock("Error. More than one errors were found.");  
+        }
         decodedMessage.value = decodedText.substr(0, 7); 
     }
     else 

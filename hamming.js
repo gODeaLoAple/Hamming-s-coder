@@ -16,14 +16,13 @@ function replaceData(data, errorPositions) {
         case 0: 
             return data;
         case 1: 
-            return invert(data, errorPositions[0]);
-        case 3: 
-            if (errorPositions[1] > 3)
-                return invert(data, errorPositions[0]);
-        case 7:
-            return invert(data, 3);
-        default: 
             return invert(data, errorPositions[0]) + "1";
+        case 3: 
+            return invert(data, errorPositions[0]) + "1";
+        case 7:
+            return invert(data, 3) + "1";
+        default: 
+            return invert(data, errorPositions[0]) + "2";
     }
 }
 
